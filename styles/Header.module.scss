@@ -1,0 +1,70 @@
+@import "config";
+.header {
+   
+    .blob {
+        position: absolute;
+        top: -60px;
+        left: -80px;
+        z-index: -1;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .links {
+            gap: 1.25rem;
+            a {
+                color: $brand-grey;
+                font-size: 1.2rem;
+            }
+        }
+        .btn {
+            border-radius: 0.375rem;
+            font-size: $text-lg;
+            outline: 2px solid transparent;
+            outline-offset: 2px;
+            background-color: $brand-blue;
+            color: #fff;
+            padding: 16px 26px;
+            font-weight: 400;
+            border: none;
+
+        }
+
+        .links,
+        .btn {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 640px) {
+    .header {
+    }
+}
+@media (min-width: 768px) {
+    .header {
+        .nav {
+            .links {
+                display: flex;
+                
+            }
+            .btn {
+                display: block;
+            }
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .header {
+    }
+}
+@media (min-width: 1280px) {
+    .header {
+    }
+}
+@media (min-width: 1536px) {
+    .header {
+    }
+}

@@ -1,8 +1,4 @@
-$brand-orange: #F6971A;
-$brand-blue: #1956c6;
-$plast-icon-green:#9AD96C;
-$plast-icon-purple:#B863FC;
-$plast-icon-orange:#FFBD66;
+@import 'config';
 
 html,
 body {
@@ -27,7 +23,6 @@ a {
   margin-left: auto;
   padding-right: 1rem;
   padding-left: 1rem;
-  background: green;
 }
 
 @media (min-width: 640px) {
