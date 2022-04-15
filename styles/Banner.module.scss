@@ -27,16 +27,22 @@
             }
             input {
                 border-radius: $rounded-lg;
-                --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-                --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+                --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+                --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
                 box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
                 outline: 2px solid transparent;
                 outline-offset: 2px;
                 border-color: transparent;
                 padding: 1.1rem;
                 flex: 1 1 auto;
-                color: $brand-grey;
+                color: #000;
                 border: 1px solid rgb(243, 244, 246);
+                transition-duration: 250ms;
+                transition-delay: 100ms;
+
+                &:focus {
+                    border: 1px solid $brand-blue;
+                }
             }
         }
     }
@@ -75,7 +81,6 @@
                 text-align: left;
                 margin-bottom: 2rem;
                 line-height: 1.5;
-                
             }
         }
         .imageDiv {
@@ -84,16 +89,14 @@
 }
 @media (min-width: 1024px) {
     .banner {
-        gap:3rem;
+        gap: 3rem;
         .textDiv {
             h1 {
                 font-size: 3.5rem;
-                
             }
             p {
                 font-size: 1.25rem;
 
-               
                 max-width: 550px;
             }
         }
@@ -103,8 +106,8 @@
 }
 @media (min-width: 1280px) {
     .banner {
-        .textDiv{
-            h1{
+        .textDiv {
+            h1 {
                 font-size: 4rem;
             }
         }
