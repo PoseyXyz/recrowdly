@@ -8,7 +8,7 @@ const Header = () => {
         <header className={styles.header}>
 
             <div className={styles.blob}>
-                <Image src="/blob.svg" alt="Vercel Logo" width={350} height={250} />
+                <Image src="/blob.svg" alt="Vercel Logo" width={600} height={500} />
 
             </div>
 

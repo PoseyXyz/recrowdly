@@ -1,11 +1,17 @@
-@import 'config';
+@import "config";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Poppins-SemiBold, sans-serif;
+  // font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+  //   Helvetica Neue, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Roboto Slab', serif;
 }
 
 a {
@@ -17,6 +23,7 @@ a {
   box-sizing: border-box;
 }
 
+
 .container {
   width: 100%;
   margin-right: auto;
@@ -27,26 +34,26 @@ a {
 
 @media (min-width: 640px) {
   .container {
-      max-width: 640px;
+    max-width: 640px;
   }
 }
 @media (min-width: 768px) {
   .container {
-      max-width: 768px;
+    max-width: 768px;
   }
 }
 @media (min-width: 1024px) {
   .container {
-      max-width: 1024px;
+    max-width: 1024px;
   }
 }
 @media (min-width: 1280px) {
   .container {
-      max-width: 1280px;
+    max-width: 1280px;
   }
 }
 @media (min-width: 1536px) {
   .container {
-      max-width: 1536px;
+    max-width: 1536px;
   }
 }

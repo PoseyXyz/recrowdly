@@ -1,10 +1,9 @@
 @import "config";
 .header {
-   
     .blob {
         position: absolute;
-        top: -60px;
-        left: -80px;
+        top: -200px;
+        left: -200px;
         z-index: -1;
     }
 
@@ -16,20 +15,13 @@
             gap: 1.25rem;
             a {
                 color: $brand-grey;
-                font-size: 1.2rem;
+                font-size: $text-xl;
             }
         }
         .btn {
-            border-radius: 0.375rem;
-            font-size: $text-lg;
-            outline: 2px solid transparent;
-            outline-offset: 2px;
-            background-color: $brand-blue;
-            color: #fff;
+            @extend %btn;
             padding: 16px 26px;
-            font-weight: 400;
-            border: none;
-
+            font-size: $text-lg;
         }
 
         .links,
@@ -48,7 +40,6 @@
         .nav {
             .links {
                 display: flex;
-                
             }
             .btn {
                 display: block;

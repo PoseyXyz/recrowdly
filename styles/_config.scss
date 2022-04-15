@@ -8,5 +8,20 @@ $brand-grey:#B8BAC6;
 $text-sm:0.0875rem;
 $text-base:1rem;
 $text-lg:1.125rem;
-$text-xl:1.25rem
+$text-xl:1.25rem;
+$text-largest:3.25rem;
 
+
+$rounded-lg:.5rem;
+$rounded-md:.375rem;
+
+%btn {
+    border-radius: $rounded-lg;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    background-color: $brand-blue;
+    color: #fff;
+    font-weight: 400;
+    border: none;
+  }
+  
