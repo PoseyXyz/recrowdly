@@ -1,0 +1,51 @@
+@import "config";
+.affiliations {
+    margin-top: 4rem;
+
+    p {
+        color: $brand-grey;
+        text-align: center;
+    }
+    .logosContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1rem;
+        .brandLogo {
+
+        }
+    }
+}
+
+@media (min-width: 640px) {
+    .affiliations {
+      
+    }
+  }
+  @media (min-width: 768px) {
+    .affliliations {
+    
+    }
+  }
+  @media (min-width: 1024px) {
+    .affiliations {
+        .logosContainer {
+        
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            
+        }
+    }
+  }
+  @media (min-width: 1280px) {
+    .affiliations {
+      
+    }
+  }
+  @media (min-width: 1536px) {
+    .affiliations {
+     
+    }
+  }
+  
