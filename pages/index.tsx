@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Affiliations from '../components/Affiliations'
 import Banner from '../components/Banner'
 import Header from '../components/Header'
+import Steps from '../components/Steps'
 import styles from '../styles/Home.module.scss'
 
 const Home: NextPage = () => {
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
      <main>
        <Banner/>
        <Affiliations/>
+       <Steps/>
      </main>
 
       {/* <main className={styles.main}>

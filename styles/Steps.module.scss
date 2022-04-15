@@ -1,3 +1,112 @@
-.steps{
-    
+@import 'config';
+.stepsSection{
+
+    .headerContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2{
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: .5rem;
+        }
+        p{
+            text-align: center;
+            color:$brand-grey;
+            font-size: $text-lg;
+        }
+    }
+    .steps{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        
+        .step{
+            i{
+                color: #fff;
+                padding: 1rem;
+                border-radius: $rounded-lg;
+                font-size: $text-xl;
+                text-align: center;
+                display: inline-flex;
+                margin-top: 1rem;
+                --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+                --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+                box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+                
+            }
+            p{
+                color:$brand-grey;
+                max-width: 290px;
+            }
+            .uniteIcon{
+                background-color: $plast-icon-purple;
+            }
+            .cubeIcon{
+                background-color: $plast-icon-green;
+            }
+            .playIcon{
+                background-color: $plast-icon-orange;
+            }
+        }
+    }
 }
+
+
+@media (min-width: 640px) {
+    .stepsSection {
+      
+    }
+  }
+  @media (min-width: 768px) {
+    .stepsSection {
+       .headerContainer{
+        h2{
+            max-width: 700px;
+            
+        }
+        p{
+            max-width: 700px;
+        }
+       }
+        .steps{
+            
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: row;
+            .step{
+                i{
+                    color: #fff;
+                    padding: 1rem;
+                    border-radius: $rounded-lg;
+                    font-size: $text-xl;
+                    text-align: center;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    align-self: center;
+                }
+               
+            }
+        }
+    }
+  }
+  @media (min-width: 1024px) {
+    .stepsSection {
+      
+    }
+  }
+  @media (min-width: 1280px) {
+    .stepsSection {
+      
+    }
+  }
+  @media (min-width: 1536px) {
+    .stepsSection {
+      
+    }
+  }
