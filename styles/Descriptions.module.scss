@@ -1,0 +1,125 @@
+@import "config";
+.descriptions {
+  .firstSubsection {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .textSection {
+      flex: 1 1 0%;
+      h3 {
+      }
+      p {
+        color: $brand-grey;
+      }
+    }
+    .imageSection {
+      width: 100%;
+      display: block;
+      flex: 1 1 0%;
+      border: 1px solid red;
+      .imageDiv {
+        border-radius: $rounded-lg;
+        overflow: hidden;
+        border: 1px solid red;
+        width: 90%;
+      }
+      .messageCard{
+        display: flex;
+        padding: 1rem;
+        gap:1rem;
+        .avatar{
+          position: relative;
+          width: 50px;
+          height: 50px;
+          & img{
+            border-radius: 9999px;
+          }
+          
+        }
+        // .avatar img{
+        //   border-radius: 9999px;
+         
+        // }
+       
+        .textContainer{
+          h4{
+            margin: .3rem 0;
+          }
+          p{
+            margin: .3rem 0;
+          }
+        }
+      }
+    }
+  }
+  .secondSubsection {
+    .textSection {
+      h3 {
+      }
+      p {
+      }
+    }
+    .imageSection {
+      .imageDiv {
+      }
+    }
+  }
+}
+
+@media (min-width: 640px) {
+  .descriptions {
+    
+  }
+}
+@media (min-width: 768px) {
+  .descriptions {
+    
+  }
+}
+@media (min-width: 1024px) {
+  .descriptions {
+    
+      .firstSubsection {
+        display: flex;
+        flex-direction: row;
+        gap:2.5rem;
+        .textSection {
+        
+          display: flex;
+          flex-direction: column;
+
+          justify-content: center;
+          h3 {
+          }
+          p {
+          }
+        }
+        .imageSection {
+          .imageDiv {
+          }
+        }
+      }
+      .secondSubsection {
+        .textSection {
+          h3 {
+          }
+          p {
+          }
+        }
+        .imageSection {
+          .imageDiv {
+          }
+        }
+      }
+    
+  }
+}
+@media (min-width: 1280px) {
+  .descriptions {
+  }
+}
+@media (min-width: 1536px) {
+  .descriptions {
+  }
+}

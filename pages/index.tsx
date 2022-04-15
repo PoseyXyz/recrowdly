@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Affiliations from '../components/Affiliations'
 import Banner from '../components/Banner'
+import Descriptions from '../components/Descriptions'
 import Header from '../components/Header'
 import Steps from '../components/Steps'
 import styles from '../styles/Home.module.scss'
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
        <Banner/>
        <Affiliations/>
        <Steps/>
+       <Descriptions/>
      </main>
 
       {/* <main className={styles.main}>
