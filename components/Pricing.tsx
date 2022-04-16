@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../styles/Pricing.module.scss'
+import {FaCheck} from 'react-icons/fa'
 
 function Pricing() {
     return (
@@ -22,21 +23,45 @@ function Pricing() {
                         <span> /month</span>
                     </p>
                     <div className={styles.planPerks}>
-                        <span>
+                        <span className={styles.header}>
                             Pro
                         </span>
                         <p>For most business that want to optimize web queries</p>
                         <ul>
-                            <li><i></i><span>All limited links</span></li>
-                            <li><i></i><span>Own analytics platform</span></li>
-                            <li><i></i><span>Chat support</span></li>
-                            <li><i></i><span>Optimize hashtags</span></li>
-                            <li><i></i><span>Unlimited users</span></li>
+                            <li><i><FaCheck/></i><span>All limited links</span></li>
+                            <li><i><FaCheck/></i><span>Own analytics platform</span></li>
+                            <li><i><FaCheck/></i><span>Chat support</span></li>
+                            <li><i><FaCheck/></i><span>Optimize hashtags</span></li>
+                            <li><i><FaCheck/></i><span>Unlimited users</span></li>
                         </ul>
                     </div>
                     <button>Choose plan</button>
                 </div>
 
+                <div className={styles.card}>
+                    <span className={styles.popularityFlag}>
+                        MOST POPULAR
+                    </span>
+                    <p className={styles.planPrice}>
+                        <span className={styles.amount}>$100</span>
+                        <span> /month</span>
+                    </p>
+                    <div className={styles.planPerks}>
+                        <span className={styles.header}>
+                            Pro
+                        </span>
+                        <p>For most business that want to optimize web queries</p>
+                        <ul>
+                            <li><i><FaCheck/></i><span>All limited links</span></li>
+                            <li><i><FaCheck/></i><span>Own analytics platform</span></li>
+                            <li><i><FaCheck/></i><span>Chat support</span></li>
+                            <li><i><FaCheck/></i><span>Optimize hashtags</span></li>
+                            <li><i><FaCheck/></i><span>Unlimited users</span></li>
+                        </ul>
+                    </div>
+                    <button>Choose plan</button>
+                </div>
+5
             </div>
         </section>
     );

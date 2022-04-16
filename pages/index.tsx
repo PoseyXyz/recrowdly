@@ -11,6 +11,7 @@ import styles from '../styles/Home.module.scss'
 
 const Home: NextPage = () => {
   return (
+   <>
     <div className='container'>
       <Head>
         <title>Recrowdly</title>
@@ -25,7 +26,7 @@ const Home: NextPage = () => {
        <Affiliations/>
        <Steps/>
        <Descriptions/>
-       <Pricing/>
+       
      </main>
 
       {/* <main className={styles.main}>
@@ -82,6 +83,8 @@ const Home: NextPage = () => {
         </a>
       </footer> */}
     </div> 
+    <Pricing/>
+    </>
   )
 }
 
