@@ -1,5 +1,6 @@
 @import "config";
 .descriptions {
+  margin: 5rem 0;
   .firstSubsection {
     display: flex;
     flex-direction: column;
@@ -8,46 +9,88 @@
     .textSection {
       flex: 1 1 0%;
       h3 {
+        font-size: 2.3rem;
+        margin: 1rem 0;
       }
       p {
         color: $brand-grey;
+        font-size: 1.1rem;
+        max-width: 60ch;
+        line-height: 1.5;
       }
     }
     .imageSection {
       width: 100%;
       display: block;
       flex: 1 1 0%;
-      border: 1px solid red;
+      
       .imageDiv {
         border-radius: $rounded-lg;
         overflow: hidden;
-        border: 1px solid red;
-        width: 90%;
+        
+        width: 100%;
       }
-      .messageCard{
+
+      .firstCard {
+        transform: translateX(7px) translateY(-100px);
+      }
+      .secondCard {
+        transform: translateX(10px) translateY(-100px);
+      }
+      .thirdCard {
+        transform: translateX(0px) translateY(-100px);
+      }
+      .messageCard {
         display: flex;
-        padding: 1rem;
-        gap:1rem;
-        .avatar{
-          position: relative;
-          width: 50px;
-          height: 50px;
-          & img{
-            border-radius: 9999px;
+
+        flex-direction: row;
+
+        gap: 0.6rem;
+        margin: 1rem 0.5rem;
+
+        width: 90%;
+
+        // transform: translateX(200px) translateY(-50px);
+
+        &:nth-child(odd) {
+          flex-direction: row-reverse;
+        }
+
+        .avatarContainer {
+          display: flex;
+          align-items: end;
+          background-color: transparent;
+          .avatar {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            & img {
+              border-radius: 9999px;
+            }
           }
-          
         }
         // .avatar img{
         //   border-radius: 9999px;
-         
+
         // }
-       
-        .textContainer{
-          h4{
-            margin: .3rem 0;
+
+        .textContainer {
+          background-color: #fff;
+          width: 80%;
+          border-radius: $rounded-lg;
+          padding: .6rem;
+          --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+          --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+          box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+          h4 {
+            margin: 0.3rem 0;
           }
-          p{
-            margin: .3rem 0;
+          p {
+            margin: 0.3rem 0;
+            color: $brand-grey;
+            font-size: 0.9rem;
+            line-height: 1.25;
           }
         }
       }
@@ -69,57 +112,146 @@
 
 @media (min-width: 640px) {
   .descriptions {
-    
   }
 }
 @media (min-width: 768px) {
   .descriptions {
-    
+    .firstSubsection {
+      .textSection {
+        h3 {
+        }
+        p {
+        }
+      }
+      .imageSection {
+        .imageDiv{
+
+        }
+        .firstCard {
+          transform: translateX(70%) translateY(-100%);
+        }
+        .secondCard {
+          transform: translateX(90%) translateY(-115%);
+        }
+        .thirdCard {
+          transform: translateX(60%) translateY(-75%);
+        }
+        
+        .messageCard {
+          width: 50%;
+        }
+      }
+    }
+    .secondSubsection {
+      .textSection {
+        h3 {
+        }
+        p {
+        }
+      }
+      .imageSection {
+        .imageDiv {
+        }
+      }
+    }
   }
 }
 @media (min-width: 1024px) {
   .descriptions {
-    
-      .firstSubsection {
+    .firstSubsection {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      .textSection {
         display: flex;
-        flex-direction: row;
-        gap:2.5rem;
-        .textSection {
-        
-          display: flex;
-          flex-direction: column;
+        flex-direction: column;
 
-          justify-content: center;
-          h3 {
-          }
-          p {
-          }
+        justify-content: center;
+        h3 {
         }
-        .imageSection {
-          .imageDiv {
-          }
+        p {
         }
       }
-      .secondSubsection {
-        .textSection {
-          h3 {
-          }
-          p {
-          }
+      .imageSection {
+        .imageDiv {
+          width: 90%;
         }
-        .imageSection {
-          .imageDiv {
-          }
+        .firstCard {
+          transform: translateX(35%) translateY(-100%);
+        }
+        .secondCard {
+          transform: translateX(40%) translateY(-115%);
+        }
+        .thirdCard {
+          transform: translateX(25%) translateY(-75%);
+        }
+        .messageCard {
+          width: 70%;
+          
         }
       }
-    
+    }
+    .secondSubsection {
+      .textSection {
+        h3 {
+        }
+        p {
+        }
+      }
+      .imageSection {
+        .imageDiv {
+        }
+      }
+    }
   }
 }
 @media (min-width: 1280px) {
   .descriptions {
+    .firstSubsection {
+      
+      .textSection {
+   
+        h3 {
+        }
+        p {
+        }
+      }
+      .imageSection {
+        .imageDiv {
+          width: 70%;
+        }
+        .firstCard {
+          transform: translateX(40%) translateY(-100%);
+        }
+        .secondCard {
+          transform: translateX(48%) translateY(-115%);
+        }
+        .thirdCard {
+          transform: translateX(32%) translateY(-75%);
+        }
+        .messageCard {
+          width: 70%;
+          .textContainer{
+            padding: 1rem;
+          }
+        }
+      }
+    }
+    .secondSubsection {
+      .textSection {
+        h3 {
+        }
+        p {
+        }
+      }
+      .imageSection {
+        .imageDiv {
+        }
+      }
+    }
   }
 }
 @media (min-width: 1536px) {
-  .descriptions {
-  }
+  
+    
 }

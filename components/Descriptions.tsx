@@ -17,9 +17,11 @@ function Descriptions() {
                         <Image src="/animating.jpg" alt="Vercel Logo" width={1920} layout="responsive" height={1114} />
                     </div>
 
-                    <div className={styles.messageCard}>
-                        <div className={styles.avatar}>
-                            <Image src="/avatar.jpg" alt="Vercel Logo" layout="fill" objectFit='cover' />
+                    <div className={`${styles.messageCard} ${styles.firstCard}`}>
+                        <div className={styles.avatarContainer}>
+                            <div className={styles.avatar}>
+                                <Image src="/avatar.jpg" alt="Vercel Logo" layout="fill" objectFit='cover' />
+                            </div>
                         </div>
 
                         <div className={styles.textContainer}>
@@ -29,13 +31,15 @@ function Descriptions() {
 
 
                     </div>
-                    <div className={styles.messageCard}>
+                    <div className={`${styles.messageCard} ${styles.secondCard}`}>
                         {/* <div className={styles.avatarContainer}>
                             
                         </div> */}
-                        <div className={styles.avatar}>
-                                <Image className={styles.avatar} src="/avatar.jpg" alt="Vercel Logo" layout="fill" objectFit='cover'/>
+                        <div className={styles.avatarContainer}>
+                            <div className={styles.avatar}>
+                                <Image className={styles.avatar} src="/avatar.jpg" alt="Vercel Logo" layout="fill" objectFit='cover' />
                             </div>
+                        </div>
 
                         {/* <Image className={styles.avatar} src="/avatar.jpg" alt="Vercel Logo" width={100} layout="responsive" height={100} /> */}
 
@@ -46,9 +50,11 @@ function Descriptions() {
                         </div>
                     </div>
 
-                    <div className={styles.messageCard}>
-                        <div className={styles.avatar}>
-                            <Image src="/avatar.jpg" alt="Vercel Logo" layout="fill" objectFit='cover' />
+                    <div className={`${styles.messageCard} ${styles.thirdCard}`}>
+                        <div className={styles.avatarContainer}>
+                            <div className={styles.avatar}>
+                                <Image src="/avatar.jpg" alt="Vercel Logo" layout="fill" objectFit='cover' />
+                            </div>
                         </div>
 
                         <div className={styles.textContainer}>
