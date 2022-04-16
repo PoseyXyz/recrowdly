@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import styles from '../styles/Descriptions.module.scss'
+import {RiPlayCircleLine} from 'react-icons/ri'
 
 function Descriptions() {
     return (
@@ -77,7 +78,7 @@ function Descriptions() {
                 <div className={styles.imageSection}>
                     <div className={styles.containerElement}>
                         <div className={styles.overlay}>
-
+                        <button><i><RiPlayCircleLine/></i></button>
                         </div>
                         <div className={styles.circle}>
 
