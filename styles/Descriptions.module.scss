@@ -284,10 +284,7 @@
          
           .overlay{
            
-            height: 80%;
-          
-           
-            width: 100%;
+            
            
             
             
@@ -300,16 +297,9 @@
             
           }
           .imageDiv {
-            height: 100%;
-           width: 100%;
-           object-fit: cover;
-           overflow: hidden;
-           display: block;
+            
            & img{
-            height: 100%;
-            width: 100%;
-            display: none;
-            object-fit: cover;
+           
            }
             
           }
