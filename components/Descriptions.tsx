@@ -72,10 +72,19 @@ function Descriptions() {
 
                     <p>Following the campaign, they experienced a <span>46% increase</span> in their monthly website visitors leading to a significant increase in coversions from July to December</p>
 
+                    <button>Watch Video</button>
                 </div>
                 <div className={styles.imageSection}>
-                    <div className={styles.imageDiv}>
-                        <Image src="/animating.jpg" alt="Vercel Logo" width={620} height={567} />
+                    <div className={styles.containerElement}>
+                        <div className={styles.overlay}>
+
+                        </div>
+                        <div className={styles.circle}>
+
+                        </div>
+                        <div className={styles.imageDiv}>
+                            <Image src="/animating.jpg" alt="Vercel Logo" width={1920} height={1114} layout='responsive' />
+                        </div>
                     </div>
                 </div>
             </section>

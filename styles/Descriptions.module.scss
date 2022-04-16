@@ -21,13 +21,15 @@
     }
     .imageSection {
       width: 100%;
+
       display: block;
       flex: 1 1 0%;
-      
+
       .imageDiv {
         border-radius: $rounded-lg;
+
         overflow: hidden;
-        
+
         width: 100%;
       }
 
@@ -78,7 +80,7 @@
           background-color: #fff;
           width: 80%;
           border-radius: $rounded-lg;
-          padding: .6rem;
+          padding: 0.6rem;
           --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
           --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
           box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -97,14 +99,32 @@
     }
   }
   .secondSubsection {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
     .textSection {
       h3 {
+        font-size: 2.3rem;
+        margin: 1rem 0;
       }
       p {
+        color: $brand-grey;
+        font-size: 1rem;
+        max-width: 60ch;
+        line-height: 1.5;
+        font-size: 1.1rem;
+      }
+      button {
+        @extend %btn;
+        padding: 16px 30px;
       }
     }
     .imageSection {
       .imageDiv {
+        & img {
+          border-radius: $rounded-lg;
+        }
       }
     }
   }
@@ -124,8 +144,7 @@
         }
       }
       .imageSection {
-        .imageDiv{
-
+        .imageDiv {
         }
         .firstCard {
           transform: translateX(70%) translateY(-100%);
@@ -136,7 +155,7 @@
         .thirdCard {
           transform: translateX(60%) translateY(-75%);
         }
-        
+
         .messageCard {
           width: 50%;
         }
@@ -187,19 +206,60 @@
         }
         .messageCard {
           width: 70%;
-          
         }
       }
     }
     .secondSubsection {
+      flex-direction: row;
+
       .textSection {
+        flex: 1 1 0%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         h3 {
         }
         p {
+          // margin: .5rem 0;
+        }
+        button {
+          align-self: flex-start;
         }
       }
       .imageSection {
-        .imageDiv {
+        flex: 1 1 0%;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .containerElement {
+          
+          height: 100%;
+          width: 90%;
+          position: relative;
+          .overlay{
+            background-color: rgba(0, 0, 0, 0.35);
+            z-index: 2;
+            position: absolute;
+           
+            width: 100%;
+            height: 100%;
+          }
+          .circle {
+            background-color: $plast-icon-green;
+            width: 30px;
+            height: 30px;
+            padding: 3rem;
+            border-radius: 999px;
+            position: absolute;
+            top: -47px;
+            left: -47px;
+            
+          }
+          .imageDiv {
+            
+          }
         }
       }
     }
@@ -208,9 +268,7 @@
 @media (min-width: 1280px) {
   .descriptions {
     .firstSubsection {
-      
       .textSection {
-   
         h3 {
         }
         p {
@@ -231,7 +289,7 @@
         }
         .messageCard {
           width: 70%;
-          .textContainer{
+          .textContainer {
             padding: 1rem;
           }
         }
@@ -252,6 +310,4 @@
   }
 }
 @media (min-width: 1536px) {
-  
-    
 }
