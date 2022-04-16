@@ -17,10 +17,10 @@ function Pricing() {
                     <span className={styles.popularityFlag}>
                         MOST POPULAR
                     </span>
-                    <div className={styles.planPrice}>
-                        <span>$100</span>
+                    <p className={styles.planPrice}>
+                        <span className={styles.amount}>$100</span>
                         <span> /month</span>
-                    </div>
+                    </p>
                     <div className={styles.planPerks}>
                         <span>
                             Pro
@@ -34,6 +34,7 @@ function Pricing() {
                             <li><i></i><span>Unlimited users</span></li>
                         </ul>
                     </div>
+                    <button>Choose plan</button>
                 </div>
 
             </div>

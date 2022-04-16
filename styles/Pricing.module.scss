@@ -1,4 +1,152 @@
-@import 'config';
-.pricing{
+@import "config";
+.pricing {
+    display: flex;
+    flex-direction: column;
 
+    .headerSection {
+        border: 1px solid red;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        h3 {
+            font-size: 2.3rem;
+            text-align: center;
+            margin: 1rem 0;
+        }
+        p {
+            color: $brand-grey;
+        }
+        div {
+            background-color: #fff;
+            border-radius: 2rem;
+            --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+            button {
+                background-color: transparent;
+                border: none;
+                outline: none;
+                border-radius: 2rem;
+                padding: 1.2rem 30px;
+                color: $brand-grey;
+                &:nth-child(even) {
+                    background-color: $brand-blue;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .cardSection {
+        .card {
+            background-color: $brand-blue;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem 1rem;
+            color: #fff;
+            .popularityFlag {
+                align-self: flex-end;
+                color: $brand-orange;
+                font-weight: 200;
+                font-size: .9rem;
+            }
+            .planPrice {
+                .amount {
+                    font-size: 2rem;
+                    font-weight: 200;
+                }
+            }
+            .planPerks {
+                span {
+                    font-weight: 200;
+                    font-size: 1.2rem;
+                }
+                p {
+                }
+                ul {
+                    
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: .5rem;
+                    li {
+                       
+                        margin: 0;
+                        list-style-type: none;
+                        
+                        i {
+                        }
+                        span {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+            button{
+                padding: 1rem;
+                background-color: $brand-orange;
+                border: none;
+                outline: none;
+                
+                border-radius: 1.5rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 640px) {
+    .pricing {
+    }
+}
+@media (min-width: 768px) {
+    .pricing {
+    }
+}
+@media (min-width: 1024px) {
+    .pricing {
+        .headerSection {
+            h3 {
+            }
+            p {
+            }
+            div {
+                button {
+                }
+            }
+        }
+        .cardSection {
+            .card {
+                .popularityFlag {
+                }
+                .planPrice {
+                    .amont {
+                    }
+                }
+                .planPerks {
+                    span {
+                    }
+                    p {
+                    }
+                    ul {
+                        li {
+                            i {
+                            }
+                            span {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1280px) {
+    .pricing {
+    }
+}
+@media (min-width: 1536px) {
+    .pricing {
+    }
 }
