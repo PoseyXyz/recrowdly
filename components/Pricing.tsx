@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../styles/Pricing.module.scss'
 import { FaCheck } from 'react-icons/fa'
 
 function Pricing() {
+    const [activeBtn, setActiveBtn] = useState('monthly')
     return (
         <section className={styles.pricingSection}>
             <div className='container'>
@@ -10,10 +11,11 @@ function Pricing() {
 
                     <div className={styles.headerSection}>
                         <h3>Simple, transparent pricing</h3>
+                        
                         <p>No contracts. No surprise fees.</p>
                         <div className={styles.buttonContainer}>
-                            <button>MONTHLY</button>
-                            <button>YEARLY</button>
+                            <button className={`${activeBtn==='monthly'?styles.active:''}`} onClick={()=>setActiveBtn('monthly')}>MONTHLY</button>
+                            <button className={`${activeBtn==='yearly'?styles.active:''}`} onClick={()=>setActiveBtn('yearly')}>YEARLY</button>
                         </div>
                     </div>
                     <div className={styles.cardSection}>
