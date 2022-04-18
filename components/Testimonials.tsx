@@ -12,6 +12,95 @@ export interface Provider {
 }
 
 function Testimonials() {
+    const [valueRep, setValueRep] = useState(1)
+    const [displayedTestimonials, setDisplayedTestimonials] = useState<{ [fieldName: string]: Provider }>({
+        current: {},
+        nextInLine: {}
+    })
+    const [testimonials] = useState<Provider[]>(
+        [
+            {
+                id: 1,
+                name: 'Marcus Bridge',
+                message: "This is outstanding, very neat. Amazing job.",
+                position: "CEO of Bonaverde",
+                imageUri: "/avatar.jpg"
+            },
+            {
+                id: 2,
+                name: 'Nader Dabit',
+                message: "",
+                position: ""
+            },
+            {
+                id: 3,
+                name: 'Chris Thomas',
+                message: "",
+                position: ""
+            },
+            {
+                id: 4,
+                name: 'Hans Zimmer',
+                message: "",
+                position: ""
+            }
+        ]
+    )
+    // useEffect(()=>{
+    //    const intervalId =  setInterval(()=>{
+    //         incrementValueRep()
+    //     }, 5000)
+    //     return ()=> clearInterval(intervalId)
+    // }, [valueRep])
+    useEffect(() => {
+
+        flipValues()
+
+    }, [valueRep])
+    const incrementValueRep = () => {
+        if (valueRep === testimonials.length) {
+            setValueRep(1)
+        } else {
+            setValueRep(valueRep + 1)
+        }
+    }
+    const decrementValueRep = () => {
+        if (valueRep === 1) {
+            setValueRep(4)
+        } else {
+            setValueRep(valueRep - 1)
+        }
+    }
+    const flipValues = () => {
+
+        let current: Provider = {
+
+        }
+        let nextInLine: Provider = {
+
+
+        }
+        if (valueRep === testimonials.length) {
+            current = testimonials.find(testimonial => testimonial.id === valueRep)!
+            nextInLine = testimonials.find(testimonial => testimonial.id === 1)!
+            setDisplayedTestimonials({
+                ...displayedTestimonials,
+                current,
+                nextInLine
+            })
+        } else {
+            current = testimonials.find(testimonial => testimonial.id === valueRep)!
+            nextInLine = testimonials.find(testimonial => testimonial.id === valueRep + 1)!
+            setDisplayedTestimonials({
+                ...displayedTestimonials,
+                current,
+                nextInLine
+            })
+            console.log(displayedTestimonials);
+
+
+        }
+    }
     return (
         <section className={styles.testimonials}>
             <div className={styles.headlineSection}>
