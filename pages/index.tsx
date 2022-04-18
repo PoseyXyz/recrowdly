@@ -7,6 +7,7 @@ import Descriptions from '../components/Descriptions'
 import Header from '../components/Header'
 import Pricing from '../components/Pricing'
 import Steps from '../components/Steps'
+import Testimonials from '../components/Testimonials'
 import styles from '../styles/Home.module.scss'
 
 const Home: NextPage = () => {
@@ -84,6 +85,9 @@ const Home: NextPage = () => {
       </footer> */}
     </div> 
     <Pricing/>
+    <div className='container'>
+      <Testimonials/>
+    </div>
     </>
   )
 }
