@@ -41,118 +41,235 @@
         }
     }
 }
-.testimonials {
+.testimonialsSection{
     display: flex;
-    flex-direction: column;
-    padding: 2rem 0;
-  
+    flex-direction:column ;
     gap: 2rem;
+    padding: 2rem 0;
+    .testimonials {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 0;
+        gap: 2rem;    
+       
     
-
-    .headlineSection {
-     
-        h3 {
-            font-size: 2.3rem;
+        .headlineSection {
+            h3 {
+                font-size: 2.3rem;
+                margin: 1rem 0;
+            }
+            p {
+                color: $brand-grey;
+                font-size: 1.1rem;
+                max-width: 60ch;
+            }
+        }
+        .messagesSection {
+            gap:0;
+    
+            .messages {
+                overflow: hidden;
+    
+                .currentMessage {
+                    @extend %messageLayout;
+                    position: relative;
+                    background-color: white;
+                    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+                    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+                    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    
+                    z-index: 2;
+                    .avatar {
+                        & img {
+                        }
+                    }
+                    .textArea {
+                        p {
+                        }
+                        article {
+                            h4 {
+                            }
+                            span {
+                            }
+                        }
+                    }
+                }
+                .nextMessage {
+                    @extend %messageLayout;
+                    border: 1px solid lighten($color: $brand-grey, $amount: 20%);
+                    transform: translateX(40px) translateY(-88px);
+    
+                    .avatar {
+                        // display: none;
+                        & img {
+                        }
+                    }
+                    .textArea {
+                        p {
+                        }
+                        article {
+                            h4 {
+                            }
+                            span {
+                            }
+                        }
+                    }
+                }
+            }
+            .arrowButtons {
+                display: flex;
+                flex-direction: column;
+                grid-column: span 1 / span 1;
+                grid-column-start: 5;
+               
+                gap: .6rem;
+    
+                justify-content: center;
+                align-items: center;
+                %arrowBtn{
+                    background: none;
+                    border: none;
+                    outline: none;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+                    transition-delay: 60ms;
+                    transition-duration: 400ms;
+                    &:hover{
+                        transform: scale(1.4)
+                    }
+                    
+                }
+    
+                .upArrowButton {
+                    @extend %arrowBtn;
+                }
+                .downArrowButton {
+                    @extend %arrowBtn;
+                }
+            }
+        }
+        
+    }
+    .bookingContainer{
+        background-color: #F6F8FD;
+        padding: 2rem 0;
+        display: flex;
+        flex-direction:column ;
+        justify-content: center;
+        
+        border-radius: $rounded-lg;
+        gap: 1rem;
+       .headlineSection{
+           text-align: center;
+        h3{
+            font-size: 2.3rem;  
+            margin:1rem 0; 
+        }
+        p{
+            color: $brand-grey;
             margin: 1rem 0;
         }
-        p {
-            color: $brand-grey;
-            font-size: 1.1rem;
-            max-width: 60ch;
-        }
-    }
-    .messagesSection {
-        gap:0;
-
-        .messages {
-            overflow: hidden;
-
-            .currentMessage {
-                @extend %messageLayout;
-                position: relative;
-                background-color: white;
-                --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-                --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-                box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-
-                z-index: 2;
-                .avatar {
-                    & img {
-                    }
-                }
-                .textArea {
-                    p {
-                    }
-                    article {
-                        h4 {
-                        }
-                        span {
-                        }
-                    }
-                }
-            }
-            .nextMessage {
-                @extend %messageLayout;
-                border: 1px solid lighten($color: $brand-grey, $amount: 20%);
-                transform: translateX(40px) translateY(-88px);
-
-                .avatar {
-                    // display: none;
-                    & img {
-                    }
-                }
-                .textArea {
-                    p {
-                    }
-                    article {
-                        h4 {
-                        }
-                        span {
-                        }
-                    }
-                }
-            }
-        }
-        .arrowButtons {
+       }
+        .formSection{
             display: flex;
             flex-direction: column;
-            grid-column: span 1 / span 1;
-            grid-column-start: 5;
-           
-            gap: .6rem;
+            gap: 1rem;
+            padding: 0 1rem;
+            span{
+                position: relative;
+                display: flex;
+                align-items: center;
 
-            justify-content: center;
-            align-items: center;
-            %arrowBtn{
-                background: none;
-                border: none;
-                outline: none;
-                font-size: 1.5rem;
-                cursor: pointer;
-                transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-                transition-delay: 60ms;
-                transition-duration: 400ms;
-                &:hover{
-                    transform: scale(1.4)
-                }
                 
+                input{
+                    padding: 1.2rem;
+                    padding-left: 2.8rem;
+                    border-radius: $rounded-lg;
+                    width: 100%;
+                    
+                    --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+                    --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+                    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+                    outline: 2px solid transparent;
+                    outline-offset: 2px;
+                    border-color: transparent;
+                    
+                   
+                    color: #000;
+                    border: 1px solid rgb(243, 244, 246);
+                    transition-duration: 250ms;
+                    transition-delay: 100ms;
+    
+                    &:focus {
+                        border: 1px solid $brand-blue;
+                    }
+                }
+                i{
+                    position: absolute;
+                    left: 1rem;
+                    margin-top: 3.8px;
+                }
             }
-
-            .upArrowButton {
-                @extend %arrowBtn;
-            }
-            .downArrowButton {
-                @extend %arrowBtn;
+            button{
+                background-color: $brand-blue;
+                color: #fff;
+                @extend %btn;
+                padding: 1rem 1.5rem;
             }
         }
     }
 }
-
 @media (min-width: 640px) {
     .testimonials {
     }
 }
 @media (min-width: 768px) {
+    .testimonialsSection{
+        .bookingContainer{
+            gap: 1.5rem;
+            padding: 3rem 0;
+           .headlineSection{
+               
+            h3{
+                
+            }
+            p{
+                
+            }
+           }
+            .formSection{
+               flex-direction: row;
+               width: 100%;
+             
+               align-self: center;
+               display: grid;
+               grid-template-columns: repeat(4, minmax(0, 1fr));
+                span{
+                    
+                   
+                    grid-column: span 3 / span 3;
+                    
+                    input{
+                       
+        
+                        
+                    }
+                    i{
+                        
+                    }
+                }
+                button{
+                    background-color: $brand-blue;
+                    color: #fff;
+                    @extend %btn;
+                    padding: 1rem 1.5rem;
+                   
+                    grid-column: span 1 / span 1;
+                }
+            }
+        }
+    }
     // %messageLayout {
 
     //     .avatar {
@@ -309,86 +426,113 @@
         }
     }
 
-    .testimonials {
-        flex-direction: row;
-        gap: 0rem;
-        .headlineSection {
-            flex: 1 1 0%;
-            h3 {
-                font-size: 3rem;
-
-                max-width: 500px;
+    .testimonialsSection{
+        .testimonials {
+            flex-direction: row;
+            gap: 0rem;
+            .headlineSection {
+                flex: 1 1 0%;
+                h3 {
+                    font-size: 3rem;
+    
+                    max-width: 500px;
+                }
+                p {
+                }
             }
-            p {
+            .messagesSection {
+                flex: 1 1 0%;
+    
+                display: grid;
+                grid-template-columns: repeat(5, minmax(0, 1fr));
+                gap: 1rem;
+    
+                .messages {
+                    overflow: visible;
+                    grid-column: span 3 / span 3;
+    
+                    .currentMessage {
+                        --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+                        --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+                        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
+                            var(--tw-shadow);
+    
+                        .avatar {
+                            & img {
+                            }
+                        }
+                        .textArea {
+                            p {
+                            }
+                            article {
+                                h4 {
+                                }
+                                span {
+                                }
+                            }
+                        }
+                    }
+                    .nextMessage {
+                        transform: translateX(50px) translateY(-85px);
+    
+                        .avatar {
+                            // display: none;
+                            & img {
+                            }
+                        }
+                        .textArea {
+                            p {
+                            }
+                            article {
+                                h4 {
+                                }
+                                span {
+                                }
+                            }
+                        }
+                    }
+                }
+                .arrowButtons {
+                    display: flex;
+                    .upArrowButton {
+                    }
+                    .downArrowButton {
+                    }
+                }
             }
         }
-        .messagesSection {
-            flex: 1 1 0%;
-
-            display: grid;
-            grid-template-columns: repeat(5, minmax(0, 1fr));
-            gap: 1rem;
-
-            .messages {
-                overflow: visible;
-                grid-column: span 3 / span 3;
-
-                .currentMessage {
-                    --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-                    --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-                    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
-                        var(--tw-shadow);
-
-                    .avatar {
-                        & img {
-                        }
-                    }
-                    .textArea {
-                        p {
-                        }
-                        article {
-                            h4 {
-                            }
-                            span {
-                            }
-                        }
-                    }
-                }
-                .nextMessage {
-                    transform: translateX(50px) translateY(-85px);
-
-                    .avatar {
-                        // display: none;
-                        & img {
-                        }
-                    }
-                    .textArea {
-                        p {
-                        }
-                        article {
-                            h4 {
-                            }
-                            span {
-                            }
-                        }
-                    }
-                }
-            }
-            .arrowButtons {
-                display: flex;
-                .upArrowButton {
-                }
-                .downArrowButton {
-                }
+        .bookingContainer{
+           
+            .formSection{
+               
+               width: 70%;
+             
             }
         }
     }
 }
 @media (min-width: 1280px) {
-    .testimonials {
+    .testimonialsSection {
+        .bookingContainer{
+           
+            .formSection{
+               
+               width: 60%;
+             
+            }
+        }
     }
 }
 @media (min-width: 1536px) {
-    .testimonials {
+    .testimonialsSection {
+        .bookingContainer{
+           
+            .formSection{
+               
+               width: 50%;
+             
+            }
+        }
+    
     }
 }

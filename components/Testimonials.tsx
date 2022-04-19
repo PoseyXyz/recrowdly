@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import styles from '../styles/Testimonials.module.scss'
 import {IoIosArrowDown, IoIosArrowUp} from 'react-icons/io'
+import {GrMailOption} from 'react-icons/gr'
 export interface Provider {
     id?: number,
     name?: string,
@@ -106,7 +107,8 @@ function Testimonials() {
         }
     }
     return (
-        <section className={styles.testimonials}>
+       <section className={styles.testimonialsSection}>
+            <section className={styles.testimonials}>
             <div className={styles.headlineSection}>
                 <p>TESTIMONIAL</p>
                 <h3>What People Say About Us</h3>
@@ -161,7 +163,24 @@ function Testimonials() {
                 Down
             </button> */}
 
+
         </section>
+        
+        <section className={styles.bookingContainer}>
+                <div className={styles.headlineSection}>
+                <h3>Lights. Camera. Reaction!</h3>
+                <p>Start creating your very own video - today</p>
+                </div>
+
+                <form className={styles.formSection}>
+                    <span className={styles.input}>
+                        <i><GrMailOption/></i>
+                        <input placeholder='Your email address'/>
+                    </span>
+                    <button>Book a meeting</button>
+                </form>
+            </section>
+       </section>
     );
 }
 
