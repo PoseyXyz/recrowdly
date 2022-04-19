@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Affiliations from '../components/Affiliations'
 import Banner from '../components/Banner'
 import Descriptions from '../components/Descriptions'
+import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Pricing from '../components/Pricing'
 import Steps from '../components/Steps'
@@ -87,7 +88,10 @@ const Home: NextPage = () => {
     <Pricing/>
     <div className='container'>
       <Testimonials/>
+      
     </div>
+    <Footer/>
+
     </>
   )
 }

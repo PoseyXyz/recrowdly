@@ -1,0 +1,64 @@
+@import 'config';
+.footer{
+    background-color: #FAFAFB;
+    
+    .content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        padding: 2rem 0;
+        gap: 1rem;
+        .brandLogo{
+            
+        }
+        .links{
+            display: flex;
+            gap:1rem;
+            
+            a{
+                color: $brand-grey;
+            }
+        }
+        .closingText{
+            color: $brand-grey;
+            span{
+                color: #000;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+@media (min-width: 640px) {
+    .footer {
+      
+    }
+  }
+  @media (min-width: 768px) {
+    .footer {
+        .content{
+           flex-direction: row;
+           gap: 0;
+           .links{
+           
+            
+            gap:1rem;
+           }
+        }
+    }
+  }
+  @media (min-width: 1024px) {
+    .footer {
+     
+    }
+  }
+  @media (min-width: 1280px) {
+    .footer {
+    }
+  }
+  @media (min-width: 1536px) {
+    .footer {
+    
+    }
+  }
