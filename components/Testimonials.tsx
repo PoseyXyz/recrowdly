@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import styles from '../styles/Testimonials.module.scss'
+import {IoIosArrowDown, IoIosArrowUp} from 'react-icons/io'
 export interface Provider {
     id?: number,
     name?: string,
@@ -29,20 +30,23 @@ function Testimonials() {
             {
                 id: 2,
                 name: 'Nader Dabit',
-                message: "",
-                position: ""
+                message: "This is outstanding, very neat. Amazing job.",
+                position: "CEO of Bonaverde",
+                imageUri: "/avatar.jpg"
             },
             {
                 id: 3,
                 name: 'Chris Thomas',
-                message: "",
-                position: ""
+                message: "This is outstanding, very neat. Amazing job.",
+                position: "CEO of Bonaverde",
+                imageUri: "/avatar.jpg"
             },
             {
                 id: 4,
                 name: 'Hans Zimmer',
-                message: "",
-                position: ""
+                message: "This is outstanding, very neat. Amazing job.",
+                position: "CEO of Bonaverde",
+                imageUri: "/avatar.jpg"
             }
         ]
     )
@@ -110,35 +114,35 @@ function Testimonials() {
             <div className={styles.messagesSection}>
                 <div className={styles.messages}>
                     <div className={styles.currentMessage}>
-                        <span className={styles.avatar}>
-                            <Image src="/avatar.jpg" alt='avatarImg' layout='responsive' width={640} height={427} />
-                        </span>
+                        <div className={styles.avatar}>
+                            <Image src="/avatar.jpg" alt='avatarImg' layout='fill' objectFit='cover' />
+                        </div>
                         <div className={styles.textArea}>
                             <p>{displayedTestimonials.current.message}</p>
 
                             <article>
-                                <h5>{displayedTestimonials.current.name}</h5>
-                                <p>{displayedTestimonials.current.position}</p>
+                                <h4>{displayedTestimonials.current.name}</h4>
+                                <span>{displayedTestimonials.current.position}</span>
                             </article>
                         </div>
 
                     </div>
                     <div className={styles.nextMessage}>
                     <span className={styles.avatar}>
-                            <Image alt='avatarImg' src="/avatar.jpg" layout='responsive' width={640} height={427} />
+                            <Image alt='avatarImg' src="/avatar.jpg" layout='fill' objectFit='cover' />
                         </span>
                         <div className={styles.textArea}>
                             <p>{displayedTestimonials.nextInLine.message}</p>
                             <article>
-                                <h5>{displayedTestimonials.nextInLine.name}</h5>
-                                <p>{displayedTestimonials.nextInLine.position}</p>
+                                <h4>{displayedTestimonials.nextInLine.name}</h4>
+                                <span>{displayedTestimonials.nextInLine.position}</span>
                             </article>
                         </div>
                     </div>
                 </div>
                 <div className={styles.arrowButtons}>
-                    <button className={styles.upArrowButton}><i></i></button>
-                    <button className={styles.downArrowButton}><i></i></button>
+                    <button className={styles.upArrowButton} onClick={decrementValueRep}><i><IoIosArrowUp/></i></button>
+                    <button className={styles.downArrowButton} onClick={incrementValueRep}><i><IoIosArrowDown/></i></button>
                 </div>
             </div>
 

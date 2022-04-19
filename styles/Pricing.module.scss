@@ -38,9 +38,8 @@
                     transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
                     transition-delay: 60ms;
                     transition-duration: 400ms;
-                    
                 }
-                .active{
+                .active {
                     background-color: $brand-blue;
                     color: #fff;
                 }
@@ -65,7 +64,7 @@
                     align-self: flex-end;
                     color: $brand-orange;
                     font-weight: 200;
-                    font-size: .8rem;
+                    font-size: 0.8rem;
                 }
                 .planPrice {
                     .amount {
@@ -105,7 +104,7 @@
                                 color: $brand-blue;
                             }
                             span {
-                                font-size: .95rem;
+                                font-size: 0.95rem;
                             }
                         }
                     }
@@ -124,8 +123,9 @@
                     color: #fff;
                     transform: translateY(-15px);
                     --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-    --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+                    --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+                    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
+                        var(--tw-shadow);
 
                     border-radius: 1rem;
                     .planPrice {
@@ -190,7 +190,7 @@
                 .card {
                     background-color: transparent;
                     border-radius: 0;
-                   
+
                     .planPrice {
                         .amount {
                         }

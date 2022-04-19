@@ -1,33 +1,394 @@
+@import "config";
+%messageLayout {
+    border-radius: $rounded-lg;
+    // max-width: 80%;
+    margin: 1rem 0.2rem;
+
+    .avatar {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        transform: translateX(0px) translateY(-16px);
+
+        & img {
+            border-radius: 9999px;
+        }
+    }
+    .textArea {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.8rem 1.5rem;
+        p {
+            margin: 0;
+            color: $brand-grey;
+            margin-top: 0.5rem;
+        }
+        article {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            h4 {
+                margin: 0;
+                font-weight: 600;
+            }
+            span {
+                margin: 0;
+                color: $brand-grey;
+                font-weight: 400;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
 .testimonials {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 1rem;
-    padding-left: 1rem;
-  }
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
   
-  @media (min-width: 640px) {
-    .testimonials {
-      max-width: 640px;
+    gap: 2rem;
+    
+
+    .headlineSection {
+     
+        h3 {
+            font-size: 2.3rem;
+            margin: 1rem 0;
+        }
+        p {
+            color: $brand-grey;
+            font-size: 1.1rem;
+            max-width: 60ch;
+        }
     }
-  }
-  @media (min-width: 768px) {
-    .testimonials {
-      max-width: 768px;
+    .messagesSection {
+        gap:0;
+
+        .messages {
+            overflow: hidden;
+
+            .currentMessage {
+                @extend %messageLayout;
+                position: relative;
+                background-color: white;
+                --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+                --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+                box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+                z-index: 2;
+                .avatar {
+                    & img {
+                    }
+                }
+                .textArea {
+                    p {
+                    }
+                    article {
+                        h4 {
+                        }
+                        span {
+                        }
+                    }
+                }
+            }
+            .nextMessage {
+                @extend %messageLayout;
+                border: 1px solid lighten($color: $brand-grey, $amount: 20%);
+                transform: translateX(40px) translateY(-88px);
+
+                .avatar {
+                    // display: none;
+                    & img {
+                    }
+                }
+                .textArea {
+                    p {
+                    }
+                    article {
+                        h4 {
+                        }
+                        span {
+                        }
+                    }
+                }
+            }
+        }
+        .arrowButtons {
+            display: flex;
+            flex-direction: column;
+            grid-column: span 1 / span 1;
+            grid-column-start: 5;
+           
+            gap: .6rem;
+
+            justify-content: center;
+            align-items: center;
+            %arrowBtn{
+                background: none;
+                border: none;
+                outline: none;
+                font-size: 1.5rem;
+                cursor: pointer;
+                transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+                transition-delay: 60ms;
+                transition-duration: 400ms;
+                &:hover{
+                    transform: scale(1.4)
+                }
+                
+            }
+
+            .upArrowButton {
+                @extend %arrowBtn;
+            }
+            .downArrowButton {
+                @extend %arrowBtn;
+            }
+        }
     }
-  }
-  @media (min-width: 1024px) {
+}
+
+@media (min-width: 640px) {
     .testimonials {
-      max-width: 1024px;
     }
-  }
-  @media (min-width: 1280px) {
+}
+@media (min-width: 768px) {
+    // %messageLayout {
+
+    //     .avatar {
+    //         position: absolute;
+    //         width: 60px;
+    //         height: 60px;
+    //         transform: translateX(-25px) translateY(-25px);
+
+    //         & img {
+    //             border-radius: 9999px;
+    //         }
+    //     }
+    //     .textArea {
+    //         display: flex;
+    //         flex-direction: column;
+    //         gap: 2rem;
+    //         padding: 2rem;
+    //         //     --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    //         // --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+    //         // box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    //         // border-radius: $rounded-lg;
+    //         p {
+    //             margin: 0;
+    //             color: $brand-grey;
+    //             margin-top: 0.5rem;
+    //         }
+    //         article {
+    //             display: flex;
+    //             flex-direction: column;
+    //             gap: 0.3rem;
+    //             h4 {
+    //                 margin: 0;
+    //                 font-weight: 600;
+    //             }
+    //             span {
+    //                 margin: 0;
+    //                 color: $brand-grey;
+    //                 font-weight: 400;
+    //                 font-size: 0.8rem;
+    //             }
+    //         }
+    //     }
+    // }
+
+    // .testimonials {
+    //     flex-direction: row;
+    //     gap: 0rem;
+    //     .headlineSection {
+
+    //         flex: 1 1 0%;
+    //         h3 {
+    //           font-size: 3rem;
+    //           margin: 1rem 0;
+    //           max-width: 600px;
+
+    //         }
+    //         p {
+
+    //         }
+    //     }
+    //     .messagesSection {
+    //         flex: 1 1 0%;
+
+    //        display: grid;
+    //        grid-template-columns: repeat(5, minmax(0, 1fr));
+    //        gap: 1rem;
+
+    //         .messages {
+
+    //             overflow: visible;
+    //             grid-column: span 3 / span 3;
+
+    //             .currentMessage {
+    //                 @extend %messageLayout;
+    //                 position: relative;
+    //                 background-color: white;
+    //                 --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    //                 --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+    //                 box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+    //                 z-index: 2;
+    //                 .avatar {
+    //                     & img {
+    //                     }
+    //                 }
+    //                 .textArea {
+    //                     p {
+    //                     }
+    //                     article {
+    //                         h4 {
+    //                         }
+    //                         span {
+    //                         }
+    //                     }
+    //                 }
+    //             }
+    //             .nextMessage {
+    //                 @extend %messageLayout;
+    //                 border: 1px solid lighten($color: $brand-grey, $amount: 20%);
+    //                 transform: translateX(50px) translateY(-85px);
+
+    //                 .avatar {
+    //                     // display: none;
+    //                     & img {
+    //                     }
+    //                 }
+    //                 .textArea {
+    //                     p {
+    //                     }
+    //                     article {
+    //                         h4 {
+    //                         }
+    //                         span {
+    //                         }
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //         .arrowButtons {
+    //             display: flex;
+    //             flex-direction: column;
+    //             grid-column: span 1 / span 1;
+    //             grid-column-start: 5;
+
+    //             justify-content: center;
+    //             align-items: flex-end;
+
+    //             .upArrowButton {
+    //             }
+    //             .downArrowButton {
+    //             }
+    //         }
+    //     }
+    // }
+}
+@media (min-width: 1024px) {
+    %messageLayout {
+        .avatar {
+            width: 60px;
+            height: 60px;
+            transform: translateX(-25px) translateY(-25px);
+        }
+        .textArea {
+            gap: 2rem;
+            padding: 2rem;
+            //     --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+            // --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+            // box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+            // border-radius: $rounded-lg;
+            p {
+            }
+            article {
+            }
+        }
+    }
+
     .testimonials {
-      max-width: 1280px;
+        flex-direction: row;
+        gap: 0rem;
+        .headlineSection {
+            flex: 1 1 0%;
+            h3 {
+                font-size: 3rem;
+
+                max-width: 500px;
+            }
+            p {
+            }
+        }
+        .messagesSection {
+            flex: 1 1 0%;
+
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 1rem;
+
+            .messages {
+                overflow: visible;
+                grid-column: span 3 / span 3;
+
+                .currentMessage {
+                    --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+                    --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+                    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
+                        var(--tw-shadow);
+
+                    .avatar {
+                        & img {
+                        }
+                    }
+                    .textArea {
+                        p {
+                        }
+                        article {
+                            h4 {
+                            }
+                            span {
+                            }
+                        }
+                    }
+                }
+                .nextMessage {
+                    transform: translateX(50px) translateY(-85px);
+
+                    .avatar {
+                        // display: none;
+                        & img {
+                        }
+                    }
+                    .textArea {
+                        p {
+                        }
+                        article {
+                            h4 {
+                            }
+                            span {
+                            }
+                        }
+                    }
+                }
+            }
+            .arrowButtons {
+                display: flex;
+                .upArrowButton {
+                }
+                .downArrowButton {
+                }
+            }
+        }
     }
-  }
-  @media (min-width: 1536px) {
+}
+@media (min-width: 1280px) {
     .testimonials {
-      max-width: 1536px;
     }
-  }
+}
+@media (min-width: 1536px) {
+    .testimonials {
+    }
+}
