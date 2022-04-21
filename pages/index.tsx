@@ -9,9 +9,30 @@ import Header from '../components/Header'
 import Pricing from '../components/Pricing'
 import Steps from '../components/Steps'
 import Testimonials from '../components/Testimonials'
-import styles from '../styles/Home.module.scss'
+import { GetStaticProps, InferGetStaticPropsType } from 'next';
+import { useState } from 'react'
 
-const Home: NextPage = () => {
+
+
+export interface Plans{
+  monthly:[
+      {
+          description:string,
+          id:number,
+          mostPopular:boolean,
+          name:string,
+          perks:string[]
+      }
+  ],
+
+  yearly:string
+  
+}
+
+
+
+const Home: NextPage = ({plans}:InferGetStaticPropsType<typeof getStaticProps>) => {
+ 
   return (
    <>
     <div className='container'>
@@ -85,10 +106,10 @@ const Home: NextPage = () => {
         </a>
       </footer> */}
     </div> 
-    <Pricing/>
+    <Pricing plans={plans}/>
+    <button onClick={()=>console.log(plans)}>Click me</button>
     <div className='container'>
       <Testimonials/>
-      
     </div>
     <Footer/>
 
@@ -97,3 +118,14 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+export const getStaticProps:GetStaticProps =async ()=>{
+  const data = await fetch(`https://recrowdly-2e455-default-rtdb.firebaseio.com/plans.json`)
+  const plans: Plans = await data.json()
+
+  return {
+      props:{
+          plans
+      }
+  }
+}
