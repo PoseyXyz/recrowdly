@@ -33,7 +33,7 @@ function Testimonials() {
                 name: 'Nader Dabit',
                 message: "This is outstanding, very neat. Amazing job.",
                 position: "CEO of Bonaverde",
-                imageUri: "/avatar.jpg"
+                imageUri: "/avatars/avatar2.jpg"
             },
             {
                 id: 3,
@@ -47,7 +47,7 @@ function Testimonials() {
                 name: 'Hans Zimmer',
                 message: "This is outstanding, very neat. Amazing job.",
                 position: "CEO of Bonaverde",
-                imageUri: "/avatar.jpg"
+                imageUri: "/avatars/avatar4.jpg"
             }
         ]
     )

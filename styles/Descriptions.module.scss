@@ -138,6 +138,9 @@
         max-width: 60ch;
         line-height: 1.5;
         font-size: 1.1rem;
+        span{
+          color: black;
+        }
       }
       button {
         @extend %btn;

@@ -34,7 +34,7 @@ function Descriptions() {
                     <div className={`${styles.messageCard} ${styles.firstCard}`}>
                         <div className={styles.avatarContainer}>
                             <div className={styles.avatar}>
-                                <Image src="/avatar.jpg" alt="Vercel Logo" layout="fill" objectFit='cover' />
+                                <Image src="/avatars/avatar3.jpg" alt="Vercel Logo" layout="fill" objectFit='cover' />
                             </div>
                         </div>
 
@@ -67,7 +67,7 @@ function Descriptions() {
                     <div className={`${styles.messageCard} ${styles.thirdCard}`}>
                         <div className={styles.avatarContainer}>
                             <div className={styles.avatar}>
-                                <Image src="/avatar.jpg" alt="Vercel Logo" layout="fill" objectFit='cover' />
+                                <Image src="/avatars/avatar4.jpg" alt="Vercel Logo" layout="fill" objectFit='cover' />
                             </div>
                         </div>
 

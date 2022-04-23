@@ -10,20 +10,20 @@ function Affiliations() {
 
             <div className={styles.logosContainer}>
             <div className={styles.brandLogo}>
-            <Image src="/brand-logos/facebook.svg" alt="Vercel Logo" width={190} height={100} />
+            <Image src="/brand-logos/facebook.svg" alt="Vercel Logo" width={150} height={100} />
             </div>
             <div className={styles.brandLogo}>
-            <Image src="/brand-logos/tesla.svg" alt="Vercel Logo" width={190} height={100} />
+            <Image src="/brand-logos/tesla.svg" alt="Vercel Logo" width={150} height={100} />
             </div>
             <div className={styles.brandLogo}>
-            <Image src="/brand-logos/zoom.svg" alt="Vercel Logo" width={190} height={100} />
+            <Image src="/brand-logos/zoom.svg" alt="Vercel Logo" width={150} height={100} />
             </div>
             
             <div className={styles.brandLogo}>
-            <Image src="/brand-logos/champion.svg" alt="Vercel Logo" width={190} height={100} />
+            <Image src="/brand-logos/champion.svg" alt="Vercel Logo" width={150} height={100} />
             </div>
             <div className={styles.brandLogo}>
-            <Image src="/brand-logos/nitto.svg" alt="Vercel Logo" width={190} height={100} />
+            <Image src="/brand-logos/nitto.svg" alt="Vercel Logo" width={150} height={100} />
             </div>
             </div>
 
