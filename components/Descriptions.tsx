@@ -1,13 +1,24 @@
 import Image from 'next/image';
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import styles from '../styles/Descriptions.module.scss'
-import { RiPlayCircleLine } from 'react-icons/ri'
+import { RiPlayCircleLine, RiPauseCircleLine } from 'react-icons/ri'
 
 
 function Descriptions() {
-    const videoRef=useRef(null)
+    const videoRef=useRef<HTMLDivElement>(null);
+    const [playing, setPlaying] = useState(true);
+    const videoHandler = (control:string) => {
+        if (control === "play") {
+          videoRef.current.play();
+          setPlaying(true)
+        } else if (control === "pause") {
+          videoRef.current.pause();
+          setPlaying(false)
+        }
+      };
     return (
         <section className={styles.descriptions}>
+          
             <section className={styles.firstSubsection}>
                 <div className={styles.textSection}>
                     <h3>A video is worth a thousand words</h3>
@@ -68,7 +79,7 @@ function Descriptions() {
                 </div>
             </section>
 
-            <section className={styles.secondSubsection}>
+            {/* <section className={styles.secondSubsection}>
                 <div className={styles.textSection}>
                     <h3>Dressed to thrill</h3>
                     <p>We worked with Pntrei to createa video that capture excitement and engagement of their brand.</p>
@@ -90,7 +101,7 @@ function Descriptions() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
             <section className={styles.secondSubsection}>
                 <div className={styles.textSection}>
                     <h3>Dressed to thrill</h3>
@@ -103,24 +114,29 @@ function Descriptions() {
                 <div className={styles.imageSection}>
                     <div className={styles.containerElement}>
                         <div className={styles.overlay}>
-                            <button><i><RiPlayCircleLine /></i></button>
+                            {
+                                playing ?
+                                <button onClick={()=>videoHandler("pause")}><i><RiPauseCircleLine /></i></button>
+                                :
+                                <button onClick={()=>videoHandler("play")}><i><RiPlayCircleLine /></i></button>
+                            }
                         </div>
                         <div className={styles.circle}>
 
                         </div>
                         <div className={styles.videoContainer}>
-                            <video autoPlay height="auto" loop muted width="auto" >
+                            <video ref={videoRef} autoPlay height="auto" loop muted width="auto" >
                                 <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
                             </video>
                         </div>
                     </div>
                 </div>
             </section>
-            <div className={styles.video}>
+            {/* <div className={styles.video}>
                 <video controls autoPlay height="250" muted width="260" >
                     <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
                 </video>
-            </div>
+            </div> */}
 
         </section>
     );
