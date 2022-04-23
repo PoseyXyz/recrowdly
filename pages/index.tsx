@@ -54,7 +54,7 @@ const Home: NextPage = ({ plans }: InferGetStaticPropsType<typeof getStaticProps
         </Head>
 
         <Header />
-        <form>
+        {/* <form>
   <div className="containerss">
     <div className="row">
       <div className="field">
@@ -73,7 +73,7 @@ const Home: NextPage = ({ plans }: InferGetStaticPropsType<typeof getStaticProps
       </div>
     </div>
   </div>
-</form>
+</form> */}
 
         <main>
           <Banner />

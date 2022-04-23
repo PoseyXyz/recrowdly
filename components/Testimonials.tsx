@@ -23,7 +23,7 @@ function Testimonials() {
         [
             {
                 id: 1,
-                name: 'Marcus Bridge',
+                name: 'Elle Golden',
                 message: "This is outstanding, very neat. Amazing job.",
                 position: "CEO of Bonaverde",
                 imageUri: "/avatar.jpg"
@@ -37,10 +37,10 @@ function Testimonials() {
             },
             {
                 id: 3,
-                name: 'Chris Thomas',
+                name: 'Lina Thumbalina',
                 message: "This is outstanding, very neat. Amazing job.",
                 position: "CEO of Bonaverde",
-                imageUri: "/avatar.jpg"
+                imageUri: "/avatars/avatar3.jpg"
             },
             {
                 id: 4,
@@ -117,7 +117,8 @@ function Testimonials() {
                 <div className={styles.messages}>
                     <div className={styles.currentMessage}>
                         <div className={styles.avatar}>
-                            <Image src="/avatar.jpg" alt='avatarImg' layout='fill' objectFit='cover' />
+                            {/* <Image src={displayedTestimonials.current.imageUri as any} alt='avatarImg' layout='fill' objectFit='cover' /> */}
+                      {displayedTestimonials.current.imageUri ? <Image src={displayedTestimonials.current.imageUri as any} alt='avatarImg' layout='fill' objectFit='cover' /> : null }
                         </div>
                         <div className={styles.textArea}>
                             <p>{displayedTestimonials.current.message}</p>
