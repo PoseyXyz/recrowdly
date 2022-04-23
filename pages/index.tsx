@@ -54,6 +54,26 @@ const Home: NextPage = ({ plans }: InferGetStaticPropsType<typeof getStaticProps
         </Head>
 
         <Header />
+        <form>
+  <div className="containerss">
+    <div className="row">
+      <div className="field">
+        <input className="input" placeholder="Voornaa m" />
+      </div>
+      <div className="field">
+        <input className="input" placeholder="Achternaa m" />
+      </div>
+    </div>
+    <div className="row">
+      <div className="field">
+        <input className="input" placeholder="E-mail" />
+      </div>
+      <div className="field field--button">
+        <button className="button" type="submit">Go</button>
+      </div>
+    </div>
+  </div>
+</form>
 
         <main>
           <Banner />

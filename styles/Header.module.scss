@@ -16,6 +16,12 @@
             a {
                 color: $brand-grey;
                 font-size: $text-xl;
+                transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+                transition-delay: 60ms;
+                transition-duration: 400ms;
+                &:hover{
+                    color: $brand-blue;
+                }
             }
         }
         .btn {

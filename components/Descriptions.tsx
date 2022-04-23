@@ -1,9 +1,11 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from '../styles/Descriptions.module.scss'
-import {RiPlayCircleLine} from 'react-icons/ri'
+import { RiPlayCircleLine } from 'react-icons/ri'
+
 
 function Descriptions() {
+    const videoRef=useRef(null)
     return (
         <section className={styles.descriptions}>
             <section className={styles.firstSubsection}>
@@ -78,7 +80,7 @@ function Descriptions() {
                 <div className={styles.imageSection}>
                     <div className={styles.containerElement}>
                         <div className={styles.overlay}>
-                        <button><i><RiPlayCircleLine/></i></button>
+                            <button><i><RiPlayCircleLine /></i></button>
                         </div>
                         <div className={styles.circle}>
 
@@ -89,6 +91,36 @@ function Descriptions() {
                     </div>
                 </div>
             </section>
+            <section className={styles.secondSubsection}>
+                <div className={styles.textSection}>
+                    <h3>Dressed to thrill</h3>
+                    <p>We worked with Pntrei to createa video that capture excitement and engagement of their brand.</p>
+
+                    <p>Following the campaign, they experienced a <span>46% increase</span> in their monthly website visitors leading to a significant increase in coversions from July to December</p>
+
+                    <button>Watch Video</button>
+                </div>
+                <div className={styles.imageSection}>
+                    <div className={styles.containerElement}>
+                        <div className={styles.overlay}>
+                            <button><i><RiPlayCircleLine /></i></button>
+                        </div>
+                        <div className={styles.circle}>
+
+                        </div>
+                        <div className={styles.videoContainer}>
+                            <video autoPlay height="auto" loop muted width="auto" >
+                                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div className={styles.video}>
+                <video controls autoPlay height="250" muted width="260" >
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                </video>
+            </div>
 
         </section>
     );

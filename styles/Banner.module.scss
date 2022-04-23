@@ -10,6 +10,35 @@
             text-align: center;
             margin-bottom: 1rem;
             margin-top: 1rem;
+            strong {
+                position: relative;
+              
+                &::after {
+                  content: '';
+                  position: absolute;
+                  bottom: -0.125rem;
+                  left: 2rem;
+                  right: 2.5rem;
+                  height: 1.12rem;
+              
+                  // Position the line behind the text so that
+                  // it is still easily readable
+                  z-index: -1;
+              
+                  // The SVG is added as an SVG background image
+                  background-image: url('/underline.svg');
+                  background-repeat: no-repeat;
+              
+                  // This allows the SVG to flex in size to fit
+                  // any length of word. If the word is short,
+                  // the SVG will be stretched vertically, if it
+                  // is long, the SVG will be stretched horizontally.
+                  // The jagged nature of this particular SVG works
+                  // with this transforming.
+                  background-size: cover;
+                }
+              }
+              
         }
         p {
             color: $brand-grey;
@@ -25,6 +54,7 @@
                 @extend %btn;
                 padding: 16px 30px;
                 font-size: $text-base;
+                
             }
             input {
                 border-radius: $rounded-lg;
@@ -40,6 +70,8 @@
                 border: 1px solid rgb(243, 244, 246);
                 transition-duration: 250ms;
                 transition-delay: 100ms;
+                
+                
 
                 &:focus {
                     border: 1px solid $brand-blue;
