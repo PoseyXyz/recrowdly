@@ -1,6 +1,7 @@
 @import "config";
 .descriptions {
-  margin: 5rem 0;
+  
+  margin-bottom: 5rem;
 //   .videoOverlay{
 //     position: relative;
 //     z-index:5;
@@ -64,6 +65,7 @@
       }
       .secondCard {
         transform: translateX(10px) translateY(-100px);
+       
       }
       .thirdCard {
         transform: translateX(0px) translateY(-100px);
@@ -102,12 +104,12 @@
         .textContainer {
           background-color: #fff;
           width: 80%;
+          padding: 1rem;
           border-radius: $rounded-lg;
-          padding: 0.6rem;
-          --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-          --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-          box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-
+          box-shadow: -25px 97px 253px -45px rgba(25,86,198,1);
+          -webkit-box-shadow: -25px 97px 253px -45px rgba(25,86,198,1);
+          -moz-box-shadow: -25px 97px 253px -45px rgba(25,86,198,1);
+      
           h4 {
             margin: .7rem 0;
             font-family: Poppins, sans-serif;
@@ -140,6 +142,7 @@
         
         span{
           color: black;
+          font-weight: 600
         }
       }
       button {
@@ -160,10 +163,10 @@
         width: 100%;
         position: relative;
         .overlay{
-          background-color: rgba(0, 0, 0, 0.35);
+          background-color: rgba(0, 0, 0, 0.2);
           z-index: 2;
           position: absolute;
-          border-radius: $rounded-lg;
+          border-radius: 1rem;
          
           width: 100%;
           height: 100%;
@@ -180,7 +183,7 @@
           }
         }
         .circle {
-          background-color: $plast-icon-green;
+          background-color: #85CE56;
           width: 30px;
           height: 30px;
           padding: 2rem;
@@ -202,7 +205,7 @@
           width: 100%;
           height: 100%;
           video{
-            border-radius: $rounded-lg;
+            border-radius: 1rem;
             width: 100%;
           height: 100%;
           }

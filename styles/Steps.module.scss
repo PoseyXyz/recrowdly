@@ -1,6 +1,7 @@
 @import 'config';
 .stepsSection{
-  
+    margin-bottom: 5rem;
+    
     .headerContainer{
         display: flex;
         flex-direction: column;
@@ -127,6 +128,7 @@
   }
   @media (min-width: 768px) {
     .stepsSection {
+        margin-bottom: 7rem;
        .headerContainer{
         h2{
             max-width: 800px;

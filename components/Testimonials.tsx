@@ -107,7 +107,11 @@ function Testimonials() {
         }
     }
     return (
+      
        <section className={styles.testimonialsSection}>
+         <div className={styles.gridScribble}>
+                <Image src='/scribbles/grid.svg' width={100} height={200} />
+           </div>
             <section className={styles.testimonials}>
             <div className={styles.headlineSection}>
                 <p>TESTIMONIALS</p>
@@ -168,6 +172,12 @@ function Testimonials() {
         </section>
         
         <section className={styles.bookingContainer}>
+        <div className={styles.spiralScribble}>
+                <Image src='/scribbles/spiral.svg' alt='spiral circle image' width={300} height={300} />
+           </div>
+           <div className={styles.spiralAltScribble}>
+                <Image src='/scribbles/spiralAlt.svg' alt='spiral circle image' width={300} height={300} />
+           </div>
                 <div className={styles.headlineSection}>
                 <h3>Lights. Camera. Reaction!</h3>
                 <p>Start creating your very own video - today</p>
@@ -182,6 +192,7 @@ function Testimonials() {
                 </form>
             </section>
        </section>
+    
     );
 }
 

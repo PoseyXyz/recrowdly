@@ -1,0 +1,39 @@
+<svg width = "450px" height="450px" viewBox="0 0 450 450" version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<title>SVG arc (Concentric Circles SVG style)</title>
+	<desc>Created using https://codepen.io/netsi1964/pen/ZYpNMz/ on Sun Apr 24 2022 04:16:25 GMT+0100 (West Africa Standard Time)</desc>
+	<g id="SVG_ARC">
+		
+		<g id="circles"  stroke-width="8.5" fill="none" stroke="#9e9eab">
+			<circle id="circle1" cx="214.29" cy="214.29" r="14.29" />
+			<circle id="circle2" cx="214.29" cy="214.29" r="28.57" />
+			<circle id="circle3" cx="214.29" cy="214.29" r="42.86" />
+			<circle id="circle4" cx="214.29" cy="214.29" r="57.14" />
+			<circle id="circle5" cx="214.29" cy="214.29" r="71.43" />
+			<circle id="circle6" cx="214.29" cy="214.29" r="85.71" />
+			<circle id="circle7" cx="214.29" cy="214.29" r="100" />
+			<circle id="circle8" cx="214.29" cy="214.29" r="114.29" />
+			<circle id="circle9" cx="214.29" cy="214.29" r="128.57" />
+			<circle id="circle10" cx="214.29" cy="214.29" r="142.86" />
+			<circle id="circle11" cx="214.29" cy="214.29" r="157.14" />
+			<circle id="circle12" cx="214.29" cy="214.29" r="171.43" />
+			<circle id="circle13" cx="214.29" cy="214.29" r="185.71" />
+			<circle id="circle14" cx="214.29" cy="214.29" r="200" />
+		</g>
+		<g id="arcs"  stroke-width="8.5" fill="none" stroke="#d5d5e2">
+			<path  stroke-linecap="round" stroke-linejoin="round" id="arc1" d="M 228.54 213.27 A14.29 14.29 0 0 0 200.52 210.48"/>
+			<path  stroke-linecap="round" stroke-linejoin="round" id="arc2" d="M 240.47 225.73 A28.57 28.57 0 0 0 223.25 187.16"/>
+			<path  stroke-linecap="round" stroke-linejoin="round" id="arc3" d="M 223.67 256.11 A42.86 42.86 0 1 0 173.15 226.31"/>
+			<path  stroke-linecap="round" stroke-linejoin="round" id="arc4" d="M 183.23 262.25 A57.14 57.14 0 0 0 271.37 211.61"/>
+			<path  stroke-linecap="round" stroke-linejoin="round" id="arc5" d="M 211.81 285.68 A71.43 71.43 0 1 0 209.42 285.55"/>
+			<path  stroke-linecap="round" stroke-linejoin="round" id="arc6" d="M 134.03 184.19 A85.71 85.71 0 0 0 158.43 279.3"/>
+			<path  stroke-linecap="round" stroke-linejoin="round" id="arc7" d="M 275.73 293.19 A100 100 0 0 0 293.25 275.65"/>
+			<path  stroke-linecap="round" stroke-linejoin="round" id="arc8" d="M 101.14 198.22 A114.29 114.29 0 0 0 309.87 276.95"/>
+			<path  stroke-linecap="round" stroke-linejoin="round" id="arc9" d="M 342.27 201.98 A128.57 128.57 0 0 0 340.49 189.69"/>
+			<path  stroke-linecap="round" stroke-linejoin="round" id="arc10" d="M 352.95 179.94 A142.86 142.86 0 1 0 344.66 272.7"/>
+			<path  stroke-linecap="round" stroke-linejoin="round" id="arc11" d="M 230.47 370.6 A157.14 157.14 0 1 0 161.01 66.45"/>
+			<path  stroke-linecap="round" stroke-linejoin="round" id="arc12" d="M 176.27 381.45 A171.43 171.43 0 1 0 79.84 107.93"/>
+			<path  stroke-linecap="round" stroke-linejoin="round" id="arc13" d="M 242.76 397.81 A185.71 185.71 0 0 0 316.45 369.38"/>
+			<path  stroke-linecap="round" stroke-linejoin="round" id="arc14" d="M 128.08 33.82 A200 200 0 1 0 183.7 16.64"/>
+		</g>
+	</g>
+</svg>

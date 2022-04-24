@@ -46,8 +46,18 @@
     display: flex;
     flex-direction:column ;
     gap: 2rem;
-    padding: 2rem 0;
+    padding: 1rem 0;
     margin: 2rem 0;
+    position: relative;
+    
+    .gridScribble{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translateX(80px);
+        z-index: -1;
+        display: none;
+    }
     .testimonials {
         display: flex;
         flex-direction: column;
@@ -156,13 +166,37 @@
     }
     .bookingContainer{
         background-color: #F6F8FD;
-        padding: 2rem 0;
+        padding: 3rem 0;
         display: flex;
         flex-direction:column ;
         justify-content: center;
-        
-        border-radius: $rounded-lg;
+        border-radius: 1rem;
         gap: 1rem;
+        margin-bottom: 3rem;
+
+        position: relative;
+        overflow: hidden;
+        %scribble{
+           position: absolute;
+            z-index: 1;
+            display: none;
+            img{
+                
+            }
+        }
+        .spiralAltScribble{
+            @extend %scribble;
+            
+            bottom:0;
+            left: 0;
+            transform: translateX(-80px) translateY(60px)
+        }
+        .spiralScribble{
+            @extend %scribble;
+            transform: translateX(110px) translateY(-80px);
+            top:0;
+            right: 0;
+        }
        .headlineSection{
            text-align: center;
         h3{
@@ -180,6 +214,8 @@
             flex-direction: column;
             gap: 1rem;
             padding: 0 1rem;
+            position: relative;
+            z-index: 2;
             span{
                 position: relative;
                 display: flex;
@@ -230,9 +266,14 @@
 }
 @media (min-width: 768px) {
     .testimonialsSection{
+        
         .bookingContainer{
             gap: 1.5rem;
-            padding: 3rem 0;
+            padding: 5rem 0;
+            margin-bottom: 5rem;
+            %scribble{
+                display: block;
+            }
            .headlineSection{
                
             h3{
@@ -506,6 +547,9 @@
             }
         }
         .bookingContainer{
+            %scribble{
+                display: block;
+            }
            
             .formSection{
                
@@ -529,6 +573,9 @@
 }
 @media (min-width: 1536px) {
     .testimonialsSection {
+        .gridScribble{
+            display: block;
+        }
         .bookingContainer{
            
             .formSection{

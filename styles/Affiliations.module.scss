@@ -1,6 +1,6 @@
 @import "config";
 .affiliations {
-    margin-top: 4rem;
+    margin: 2.5rem 0 1rem 0;
 
     p {
         color: $brand-grey;
@@ -25,8 +25,9 @@
     }
   }
   @media (min-width: 768px) {
-    .affliliations {
-    
+    .affiliations {
+      margin: 5rem 0 3rem 0;
+     
     }
   }
   @media (min-width: 1024px) {
