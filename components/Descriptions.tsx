@@ -5,16 +5,16 @@ import { RiPlayCircleLine, RiPauseCircleLine } from 'react-icons/ri'
 
 
 function Descriptions() {
-    const videoRef=useRef<HTMLDivElement>(null);
+    const videoRef=useRef<null | HTMLVideoElement>(null);
     const [playing, setPlaying] = useState(true);
     const videoHandler = (control:string) => {
-        if (control === "play") {
-          videoRef.current.play();
-          setPlaying(true)
-        } else if (control === "pause") {
-          videoRef.current.pause();
-          setPlaying(false)
-        }
+      if (control === "play") {
+        videoRef.current&&videoRef.current.play();
+            setPlaying(true)
+          } else if (control === "pause") {
+            videoRef.current&&videoRef.current.pause();
+            setPlaying(false)
+          }
       };
     return (
         <section className={styles.descriptions}>
