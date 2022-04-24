@@ -5,6 +5,7 @@
     p {
         color: $brand-grey;
         text-align: center;
+     
     }
     .logosContainer {
         display: flex;
@@ -30,6 +31,7 @@
   }
   @media (min-width: 1024px) {
     .affiliations {
+    
         .logosContainer {
         
             justify-content: space-between;

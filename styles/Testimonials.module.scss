@@ -31,6 +31,7 @@
             h4 {
                 margin: 0;
                 font-weight: 600;
+                font-family: Poppins, sans-serif;
             }
             span {
                 margin: 0;
@@ -61,8 +62,9 @@
             }
             p {
                 color: $brand-grey;
-                font-size: 1.1rem;
+                font-weight: 500;
                 max-width: 60ch;
+                font-size: 1.1rem;
             }
         }
         .messagesSection {
@@ -164,13 +166,13 @@
        .headlineSection{
            text-align: center;
         h3{
-            font-size: 2.3rem;  
-            margin:1rem 0; 
-            font-weight: 600;
+            font-size: 2rem;  
+            margin: 0; 
+           
         }
         p{
             color: $brand-grey;
-            margin: 1rem 0;
+            margin: 1rem 0 1.5rem 0;
         }
        }
         .formSection{
@@ -217,7 +219,7 @@
                 background-color: $brand-blue;
                 color: #fff;
                 @extend %btn;
-                padding: 1rem 1.5rem;
+                padding: 16px 30px;
             }
         }
     }

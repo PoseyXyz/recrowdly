@@ -36,13 +36,12 @@
     .textSection {
       flex: 1 1 0%;
       h3 {
-        font-size: 2.3rem;
-        margin: 1rem 0;
+        font-size: 2rem;
+        margin: 0;
       }
       p {
-        color: $brand-grey;
-        font-size: 1.1rem;
-        max-width: 60ch;
+        color: $brand-grey; 
+        max-width: 52ch;
         line-height: 1.5;
       }
     }
@@ -110,7 +109,8 @@
           box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 
           h4 {
-            margin: 0.3rem 0;
+            margin: .7rem 0;
+            font-family: Poppins, sans-serif;
           }
           p {
             margin: 0.3rem 0;
@@ -129,15 +129,15 @@
 
     .textSection {
       h3 {
-        font-size: 2.3rem;
-        margin: 1rem 0;
+        font-size: 2rem;
+        margin:0;
       }
       p {
         color: $brand-grey;
-        font-size: 1rem;
+        margin-bottom: .5rem;
         max-width: 60ch;
-        line-height: 1.5;
-        font-size: 1.1rem;
+        
+        
         span{
           color: black;
         }
@@ -145,6 +145,8 @@
       button {
         @extend %btn;
         padding: 16px 30px;
+        
+        margin: 1rem 0;
       }
     }
     .imageSection {

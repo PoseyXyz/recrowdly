@@ -7,7 +7,7 @@ function Banner() {
         <section className={styles.banner}>
             <div className={styles.textDiv}>
                 <h1><strong>Lights. Camera. </strong>Reaction!</h1>
-                <p>We make animated videos for businesses to tell your product or service story, educate more customers and drive more revenue</p>
+                <p>We make animated videos for businesses to tell your product or service story, educate more customers and drive more revenue.</p>
                 <span className={styles.form}>
                     <input placeholder="Enter your email and let's get started"/>
                     <button>Subscribe</button>

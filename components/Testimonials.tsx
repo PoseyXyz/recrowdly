@@ -110,7 +110,7 @@ function Testimonials() {
        <section className={styles.testimonialsSection}>
             <section className={styles.testimonials}>
             <div className={styles.headlineSection}>
-                <p>TESTIMONIAL</p>
+                <p>TESTIMONIALS</p>
                 <h3>What People Say About Us</h3>
             </div>
             <div className={styles.messagesSection}>
