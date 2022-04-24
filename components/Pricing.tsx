@@ -333,7 +333,7 @@ function Pricing({plans}:Props) {
                                 MOST POPULAR
                             </span> : null}
                             <p className={styles.planPrice}>
-                                <span className={styles.amount}>{price}</span>
+                                <span className={styles.amount}>${price}</span>
                                 <span> /month</span>
                             </p>
                             <div className={styles.planPerks}>
