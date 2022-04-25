@@ -1,16 +1,11 @@
 @import "config";
-.header {
-    .blob {
-        position: absolute;
-        top: -200px;
-        left: -200px;
-        z-index: -1;
-    }
-
+.header {   
     .nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
+        z-index: 2;
         .links {
             gap: 1.25rem;
             a {
@@ -33,7 +28,7 @@
         .links,
         .btn {
             display: none;
-        }
+        }       
     }
 }
 

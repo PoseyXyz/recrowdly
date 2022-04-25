@@ -10,7 +10,9 @@ import Pricing from '../components/Pricing'
 import Steps from '../components/Steps'
 import Testimonials from '../components/Testimonials'
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
-
+import Link from 'next/link'
+import styles from '../styles/Header.module.scss'
+import { useState } from 'react'
 
 
 
@@ -46,6 +48,10 @@ const Home: NextPage = ({ plans }: InferGetStaticPropsType<typeof getStaticProps
 
   return (
     <>
+      <div className='blob'>
+        <Image src="/blob.svg" alt="Vercel Logo" width={600} height={500} />
+      </div>
+
       <div className='container'>
         <Head>
           <title>Recrowdly</title>
@@ -54,6 +60,7 @@ const Home: NextPage = ({ plans }: InferGetStaticPropsType<typeof getStaticProps
         </Head>
 
         <Header />
+
         {/* <form>
   <div className="containerss">
     <div className="row">

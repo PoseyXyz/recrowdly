@@ -4,13 +4,12 @@ import React from 'react';
 import styles from '../styles/Header.module.scss'
 
 const Header = () => {
+
     return (
+   
         <header className={styles.header}>
 
-            <div className={styles.blob}>
-                <Image src="/blob.svg" alt="Vercel Logo" width={600} height={500} />
-
-            </div>
+           
 
 
 
@@ -37,11 +36,14 @@ const Header = () => {
 
                 <button className={styles.btn}>Book a meeting</button>
 
-
+                
             </nav>
 
+            
+
         </header>
-    );
+    
+    )
 }
 
 export default Header;
