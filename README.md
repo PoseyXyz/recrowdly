@@ -1,6 +1,6 @@
 # Recrowdly
 
-This repo contains code for an animation studio's landing page built using Next.js
+This repo contains code for an animation studio's landing page built using Next.js, Typescript and Firebase
 
 ## Live demo
 
