@@ -24,7 +24,7 @@ function Testimonials() {
             {
                 id: 1,
                 name: 'Elle Golden',
-                message: "Recrowd;y's deliverables always excced my expectations.",
+                message: "Recrowdly's deliverables always excced my expectations.",
                 position: "Marketing manger at Flick",
                 imageUri: "/avatar.jpg"
             },
