@@ -319,8 +319,8 @@ function Pricing({plans}:Props) {
 
                         <p>Attractive packages . No surprise fees.</p>
                         <div className={styles.buttonContainer}>
-                            <button className={`${activeBtn === 'monthly' ? styles.active : ''}`} onClick={() => setActiveBtn('monthly')}>One-off</button>
-                            <button className={`${activeBtn === 'yearly' ? styles.active : ''}`} onClick={() => setActiveBtn('yearly')}>Contractual</button>
+                            <button className={`${activeBtn === 'monthly' ? styles.active : ''}`} onClick={() => setActiveBtn('monthly')}>ONE-OFF</button>
+                            <button className={`${activeBtn === 'yearly' ? styles.active : ''}`} onClick={() => setActiveBtn('yearly')}>CONTRACTUAL</button>
                         </div>
                     </div>
 
