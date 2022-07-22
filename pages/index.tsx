@@ -9,7 +9,7 @@ import Header from '../components/Header'
 import Pricing from '../components/Pricing'
 import Steps from '../components/Steps'
 import Testimonials from '../components/Testimonials'
-import { GetStaticProps, InferGetStaticPropsType } from 'next';
+import { GetStaticProps, InferGetStaticPropsType, GetServerSideProps } from 'next';
 
 
 // export interface Plans{
@@ -152,7 +152,7 @@ const Home: NextPage = ({ plans }: InferGetStaticPropsType<typeof getStaticProps
 
 export default Home
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const data = await fetch(`https://recrowdly-2e455-default-rtdb.firebaseio.com/planList.json`)
   const plans: Plans[] = await data.json()
 
