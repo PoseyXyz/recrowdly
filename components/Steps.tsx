@@ -8,7 +8,7 @@ function Steps() {
             
             <div className={styles.headerContainer}>
                 <h2>Recrowdly creates 2D and 3D animations with unique design and copywriting</h2>
-                <p>Our services cover the entire gamut needed to get your business value proposition shared, reshared, understoor and re-shared</p>
+                <p>Our services cover everything you need to get your business value proposition shared, reshared, understoor and re-shared</p>
             </div>
             <div className={styles.steps}>
                 <div className={styles.step}>

@@ -104,7 +104,7 @@ function Descriptions() {
             </section> */}
             <section className={styles.secondSubsection}>
                 <div className={styles.textSection}>
-                    <h3>Dressed to thrill</h3>
+                    <h3>Create to thrill</h3>
                     <p>We worked with Pntrei to createa video that capture excitement and engagement of their brand.</p>
                     <p>Following the campaign, they experienced a <span>46% increase</span> in their monthly website visitors leading to a significant increase in coversions from July to December</p>
 

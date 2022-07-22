@@ -10,10 +10,6 @@ import Pricing from '../components/Pricing'
 import Steps from '../components/Steps'
 import Testimonials from '../components/Testimonials'
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
-import Link from 'next/link'
-import styles from '../styles/Header.module.scss'
-import { useState } from 'react'
-
 
 
 // export interface Plans{

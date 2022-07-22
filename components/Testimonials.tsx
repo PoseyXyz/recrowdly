@@ -24,29 +24,29 @@ function Testimonials() {
             {
                 id: 1,
                 name: 'Elle Golden',
-                message: "This is outstanding, very neat. Amazing job.",
-                position: "CEO of Bonaverde",
+                message: "Recrowd;y's deliverables always excced my expectations.",
+                position: "Marketing manger at Flick",
                 imageUri: "/avatar.jpg"
             },
             {
                 id: 2,
                 name: 'Nader Dabit',
-                message: "This is outstanding, very neat. Amazing job.",
-                position: "CEO of Bonaverde",
+                message: "Recrowdly does justice to every single animation project you consult them for.",
+                position: "CEO, PnTrei",
                 imageUri: "/avatars/avatar2.jpg"
             },
             {
                 id: 3,
                 name: 'Lina Thumbalina',
-                message: "This is outstanding, very neat. Amazing job.",
+                message: "No animation studio comes close.",
                 position: "CEO of Bonaverde",
                 imageUri: "/avatars/avatar3.jpg"
             },
             {
                 id: 4,
                 name: 'Hans Zimmer',
-                message: "This is outstanding, very neat. Amazing job.",
-                position: "CEO of Bonaverde",
+                message: "Recrowdly's animation deliverables are always the best in class.",
+                position: "MD at NITTO",
                 imageUri: "/avatars/avatar4.jpg"
             }
         ]
